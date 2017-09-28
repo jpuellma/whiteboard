@@ -52,7 +52,16 @@ Puppet, or Chef, or anything that works. I recommend Ansible here based only on
 personal preference. Puppet will work just fine as well, but that would require
 installing it in the base OS image.
 
-* Details: [README_Ansible.md](README_ansible.md)
+<!-- * Details: [README_Ansible.md](README_ansible.md) -->
+
+I recommend Ansible here mostly because it doesn't require installing special
+agent software on the target hosts, so it keeps the pieces a bit smaller and
+more compact. There is no reason why Puppet or another config management system
+couldn't be used instead. If these images don't need any complicated
+configurations and are meant to be destroyed and rebuilt frequently, a shell
+script provisioner would probably wokd just as well and could be easier to
+manage.
+
 
 
 ## Use GitHub to manage code repositories.
@@ -69,7 +78,7 @@ GitHub becaue I'm most familiar with it, although Stash is a fine solution as
 well. Amazon CodeCommit may have some benefits simply due to its pedigree as an
 Amazon product, but I don't know what these would be as I've not used it yet.
 
-* Details: [README_github.md](README_github.md)
+<!-- * Details: [README_github.md](README_github.md) -->
 
 ## Use Jenkins to orchestrate new image builds.
 Especially for the base OS image creation, but also for other operational tasks
@@ -80,7 +89,7 @@ to govern the execution fo the build and deploy jobs.
 Atlassian Bamboo, others probably? Travis and Drone are not perfect for this.
 Circle CI might be but I am not familiar enough to say.
 
-* Details: [README_jenkins.md](README_jenkins.md)
+<!-- * Details: [README_jenkins.md](README_jenkins.md) -->
 
 ## Miscellaneous
 
