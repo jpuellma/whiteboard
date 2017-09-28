@@ -95,6 +95,22 @@ Circle CI might be but I am not familiar enough to say.
 Here's a doc that describes how a typical developer might interact with this
 workflow: [README_workflow.md](README_workflow.md)
 
+## Use Travis for testing.
+I have to confess, I don't know rails and I'm only moderately literate in ruby,
+so this is a tough step to articulate in detail. I'll make some assumptions and
+some assertions here and I expect there are more sophisticated solutions out
+there.
+
+The high-level recommendation for testing here is to incorporate Travis into the
+GitHub workflow. Pull requests into `master` or `release` (or whichever branch
+the team merges into) should trigger a CI system to do, at minimum, automated
+review of the code, and ideally, also run functional tests against the code.
+
+**Alternatives:**
+Drone, CircleCI, Jenkins, Bamboo
+
+* Details: [README_testing.md](README_testing.md)
+
 ## Miscellaneous
 
 One significant drawback to this solution is controlling privileged access.
