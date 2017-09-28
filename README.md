@@ -18,14 +18,14 @@ build image on multiple cloud platforms and virtualization platforms.
 
 The details of this part of the solution are described in
 
-* Details: [README_packer.md](README_packer.md)
+* Details: [packer.md](docs/packer.md)
 
 ## Use Terraform to deploy instances in AWS.
 Once there is a standard ami to build from, Terraform should allow anyone who
 needs to deploy or re-deploy a stack to do so with minimal input and practically
 zero knowledge of the AWS platform.
 
-* Details: [README_terraform.md](README_terraform.md)
+* Details: [terraform.md](docs/terraform.md)
 
 ## Use Vagrant to deploy instances locally.
 If done well, the Packer process will produce a Vagrant `.box` output with the
@@ -34,7 +34,7 @@ This means we can produce the same set of servers locally on our laptops and any
 code that runs on the Vagrant stack should run the same as on the AWS stack, and
 vice-versa.
 
-* Details: [README_vagrant.md](README_vagrant.md)
+* Details: [vagrant.md](docs/vagrant.md)
 
 
 ## Use Ansible to configure app and db services.
@@ -52,7 +52,7 @@ Puppet, or Chef, or anything that works. I recommend Ansible here based only on
 personal preference. Puppet will work just fine as well, but that would require
 installing it in the base OS image.
 
-<!-- * Details: [README_Ansible.md](README_ansible.md) -->
+<!-- * Details: [Ansible.md](docs/ansible.md) -->
 
 I recommend Ansible here mostly because it doesn't require installing special
 agent software on the target hosts, so it keeps the pieces a bit smaller and
@@ -78,7 +78,7 @@ GitHub becaue I'm most familiar with it, although Stash is a fine solution as
 well. Amazon CodeCommit may have some benefits simply due to its pedigree as an
 Amazon product, but I don't know what these would be as I've not used it yet.
 
-<!-- * Details: [README_github.md](README_github.md) -->
+<!-- * Details: [github.md](docs/github.md) -->
 
 ## Use Jenkins to orchestrate new image builds.
 Especially for the base OS image creation, but also for other operational tasks
@@ -89,7 +89,7 @@ to govern the execution fo the build and deploy jobs.
 Atlassian Bamboo, others probably? Travis and Drone are not perfect for this.
 Circle CI might be but I am not familiar enough to say.
 
-<!-- * Details: [README_jenkins.md](README_jenkins.md) -->
+<!-- * Details: [jenkins.md](docs/jenkins.md) -->
 
 ## Use Travis for testing.
 I have to confess, I don't know rails and I'm only moderately literate in ruby,
@@ -105,11 +105,11 @@ review of the code, and ideally, also run functional tests against the code.
 **Alternatives:**
 Drone, CircleCI, Jenkins, Bamboo
 
-* Details: [README_testing.md](README_testing.md)
+* Details: [testing.md](docs/testing.md)
 
 ## Workflow: Start to Finish
 Here's a doc that describes how a typical developer might interact with this
-workflow: [README_workflow.md](README_workflow.md)
+workflow: [workflow.md](docs/workflow.md)
 
 ## Miscellaneous
 

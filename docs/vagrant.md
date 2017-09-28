@@ -3,7 +3,7 @@ Provisioning with Vagrant
 
 - A new GitHub repo should be created for this.
 
-- A sample Vagrantfile is located here: [Vagrantfile.sample](Vagrantfile.sample)
+- A sample Vagrantfile is located here: [Vagrantfile.sample](../Vagrantfile.sample)
 
 - Once the repo is cloned, the README.md should include some brief instructions
  on how to customize the `Vagrantfile.sample` into a proper config.

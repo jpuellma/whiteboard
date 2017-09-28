@@ -5,7 +5,7 @@ Provisioning With Terraform
 users can just `make deploy` when needed.
 
 - Here's a proof-of-concept terraform config that deploys an app server and a
- database server: [main.tf](main.tf)
+ database server: [main.tf](../main.tf)
 
 - The `main.tf` shown here actually uses remote execution to install rails and
  mariadb but the more complete solution would actually use something like

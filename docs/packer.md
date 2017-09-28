@@ -9,7 +9,7 @@ able to create a new OS image by cloning this repository and running `make
 image`.
 
 - Here's a proof-of-concept packer configuration which will build a CentOS 7 ami
-in Amazon's US east region: [packer_template.json](packer_template.json).
+in Amazon's US east region: [packer_template.json](../packer_template.json).
 
 - The packer template uses variables for things like `region` and `security
 group` to allow these things to be more easily changed. Variables will be passed
