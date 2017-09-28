@@ -91,6 +91,10 @@ Circle CI might be but I am not familiar enough to say.
 
 <!-- * Details: [README_jenkins.md](README_jenkins.md) -->
 
+## Workflow: Start to Finish
+Here's a doc that describes how a typical developer might interact with this
+workflow: [README_workflow.md](README_workflow.md)
+
 ## Miscellaneous
 
 One significant drawback to this solution is controlling privileged access.
