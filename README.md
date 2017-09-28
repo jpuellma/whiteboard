@@ -1,5 +1,5 @@
- Whiteboard Exercise
- =
+Whiteboard Exercise
+=
 
 **Goal:**
 Recommend a set of solutions to allow devs at _Hello World Inc._ to easily and
@@ -77,11 +77,24 @@ that will no doubt come up in this workflow, a tool like Jenkins should be used
 to govern the execution fo the build and deploy jobs.
 
 **Alternative:**
-Atlassian Bamboo, others, probably? Travis and Drone are not perfect for this.
+Atlassian Bamboo, others probably? Travis and Drone are not perfect for this.
 Circle CI might be but I am not familiar enough to say.
 
 * Details: [README_jenkins.md](README_jenkins.md)
 
 ## Miscellaneous
 
-asdf
+One significant drawback to this solution is controlling privileged access.
+Giving every developer the AWS credentials required to provision stacks with
+Terraform means giving many developers more access than they need or probably
+_want_.
+
+In almost any conceivable solution involving self-service deployments by
+developers into an AWS environment, there will need o be some kind of traffic
+cop mechanism put in place between the user and the cloud platform to prevent
+clobbering of resources or, worse, production systems.
+
+This really is a huge challenge so I will not try to really *solve* it in this
+exercise. For any real implementation, I would expect a very serious and
+detailed discussion with the developers and the delivery engineers before
+settling on a decision.
