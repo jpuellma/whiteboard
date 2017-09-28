@@ -119,7 +119,7 @@ Terraform means giving many developers more access than they need or probably
 _want_.
 
 In almost any conceivable solution involving self-service deployments by
-developers into an AWS environment, there will need o be some kind of traffic
+developers into an AWS environment, there will need to be some kind of traffic
 cop mechanism put in place between the user and the cloud platform to prevent
 clobbering of resources or, worse, production systems.
 
