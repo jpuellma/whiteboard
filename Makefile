@@ -5,7 +5,6 @@
 
 iso_timestamp     ?= $(shell /bin/date +%Y-%m-%dT%H:%M:%S%z)
 clean_timestamp   := $(strip $(subst T,t, $(subst :,-, $(iso_timestamp))))
-nimbul_image_name := "CentOS 7 x86_64 - NYT - $(iso_timestamp)"
 
 ami_id                  ?= $(shell ./lib/get_ami_id.sh)
 AWS_ACCESS_KEY_ID       ?= AWS_ACCESS_KEY_DEFAULT
@@ -33,12 +32,6 @@ build_args = $(packer_extra_params) \
 	-var 'clean_timestamp'=$(clean_timestamp) \
 	-var 'iso_checksum'=$(iso_checksum) \
 	-var 'iso_url'=$(iso_url)
-
-NIMBUL_UPLOAD_CMD = ../bin/nimbul_add_image.py \
-	-l $(nimbul_image_name) \
-	-t $(nimbul_token) \
-	--gcp_project "core-services-prd" \
-	--nimbul_url=https://nimbul.prd.nytimes.com -vv
 
 packer_validate:
 	packer validate $(build_args) $(packer_template)
