@@ -47,7 +47,7 @@ configuration.
 This won't be invoked separately; the Terraform and Vagrant configurations will
 include Ansible as part of their provisioning process.
 
-**Alternative:**
+**Alternatives:**
 Puppet, or Chef, or anything that works. I recommend Ansible here based only on
 personal preference. Puppet will work just fine as well, but that would require
 installing it in the base OS image.
@@ -72,7 +72,7 @@ In addition to these, standardizing on `git` as a repo means being able to take
 advantage of integrations with other tools like `Travis` or `Drone` or
 `Jenkins`.
 
-**Alternative:**
+**Alternatives:**
 Stash, BitBucket, Google Cloud Source, Amazon CoceCommit, others... I recommend
 GitHub becaue I'm most familiar with it, although Stash is a fine solution as
 well. Amazon CodeCommit may have some benefits simply due to its pedigree as an
@@ -85,15 +85,11 @@ Especially for the base OS image creation, but also for other operational tasks
 that will no doubt come up in this workflow, a tool like Jenkins should be used
 to govern the execution fo the build and deploy jobs.
 
-**Alternative:**
+**Alternatives:**
 Atlassian Bamboo, others probably? Travis and Drone are not perfect for this.
 Circle CI might be but I am not familiar enough to say.
 
 <!-- * Details: [README_jenkins.md](README_jenkins.md) -->
-
-## Workflow: Start to Finish
-Here's a doc that describes how a typical developer might interact with this
-workflow: [README_workflow.md](README_workflow.md)
 
 ## Use Travis for testing.
 I have to confess, I don't know rails and I'm only moderately literate in ruby,
@@ -110,6 +106,10 @@ review of the code, and ideally, also run functional tests against the code.
 Drone, CircleCI, Jenkins, Bamboo
 
 * Details: [README_testing.md](README_testing.md)
+
+## Workflow: Start to Finish
+Here's a doc that describes how a typical developer might interact with this
+workflow: [README_workflow.md](README_workflow.md)
 
 ## Miscellaneous
 
